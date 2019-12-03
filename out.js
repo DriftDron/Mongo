@@ -1,0 +1,1 @@
+printjson( db.students1_keys1.find().toArray() )
