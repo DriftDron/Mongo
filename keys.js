@@ -16,3 +16,6 @@ function reduce(key, doc){
 	}
 /*Результат записываю в коллекцию*/
 db.students1.mapReduce(map, reduce,{out:"students1_keys1"})
+
+/*Вывод на экран*/
+load('out.js')
