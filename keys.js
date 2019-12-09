@@ -4,18 +4,7 @@ for(i = 0; i < 50; i++){
 		{"name": "Vika", "number": 123, "score": Math.random()*10 },
 		{"name": "Ivan", "number": 123, "score": Math.random()*10 }])}
 
-/*Для каждого поля документа создаю пару ключ - нзвание поля, значение - вместо null надо вернуть тип данных*/
-function map(){
-	for(var key in this) {
-		emit(key, null);
-	}
+var check = db.students1.findOne()
+for (var key in check){
+	print(key, typeof check[key]);
 }
-/*Для общих ключей надо возвращать тип данных вместо null*/
-function reduce(key, doc){
-		return null;
-	}
-/*Результат записываю в коллекцию*/
-db.students1.mapReduce(map, reduce,{out:"students1_keys1"})
-
-/*Вывод на экран*/
-load('out.js')
