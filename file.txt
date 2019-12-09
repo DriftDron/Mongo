@@ -1,2 +1,0 @@
-/*вывод в файл*/
-mongo test out.js > result.txt
